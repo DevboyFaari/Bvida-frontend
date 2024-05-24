@@ -1,9 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
 
  
   *{
-    margin: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
   }
  
+  input{
+    border: #d9dde0 2px solid;
+    border-radius: 5px 0px 0px 5px;
+    height: 53px;
+    width: 380px;
+    padding: 20px;
+    color: #000;
+  
+  }
+  input::placeholder{
+    font-family: "DM Sans", sans-serif;
+    color: #161b1d;
+  }
+  input:focus{
+    outline: none;
+  }
+  .form{
+    display: flex;
+    gap: 5px;
+    z-index: 9;
+  }
+  .btn2{
+    height: 53px;
+    background: #ee75b6;
+    color: #eef3f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+  
+  }
+  .join{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-image: url('../../public/cta-img-bg\ 1\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    margin: 50px auto;
+    border-radius: 30px;
+    height: 250px;
+    width: 70%;
+    margin-bottom: 150px;
+    z-index: 100;
+  }
+  .join::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 64, 0.5); 
+    pointer-events: none;
+    border-radius: 30px;
+  }
+  .join>p{
+    color: #fff;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    z-index: 9999;
+  }
+ 
+  .support-text>h1{
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .display{
+    background: #ffbfdf;
+    padding: 20px;
+    position: relative;
+  }
+  .auto-scroll{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffbfdf;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-wrap: normal;
+    white-space: nowrap; 
+    scroll-behavior: smooth;
+  }
+  .auto-scroll::-webkit-scrollbar{
+    display: none;
+  }
+  .png{
+    background: #00007f;
+    border-radius: 10px;
+    padding: 0 10px;
+    min-width: 480px;
+    min-height: 360px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scroll{
+    position: absolute;
+  }
+  .scroll-left{
+    z-index: 9999;
+    top: 50%;
+    left: 0;
+  }
+  .scroll-Right{
+    z-index: 9999;
+    top: 50%;
+    right: 0;
+  }
+  .tabs{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    overflow-x: scroll;
+    overflow-wrap: normal;
+    white-space: nowrap; 
+    scroll-behavior: smooth;
+  }
+  .product-category{
+    position: relative;
+  }
+  .tabs::-webkit-scrollbar{
+    display: none;
+  }
+  
+.supplements{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  border: 1px solid #000040;
+  border-radius: 5px;
+  min-height: 70.85px;
+  min-width: 193px;
+}
+.antibiotics{
+  min-height: 70.85px;
+  min-width: 193px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #000040;
+  border-radius: 5px;
+ 
+}
+.antibiotics:hover{
+  background-color: #000040;
+  color: #ffffff;
+}
+.supplements:hover {
+  background-color: #000040;
+  color: #ffffff;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 432px;
+  width: 328.81px;
+}
+.card:hover{
+  box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+}
+.card-dets{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+
+}
+.card-ttle>p{
+  color: #000040;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+.card-ttle{
+  display: flex;
+  justify-content: space-between;
+}
+.price>p{
+  color: #ba2ba5;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+.cards{
+  margin: 20px auto;
+}
