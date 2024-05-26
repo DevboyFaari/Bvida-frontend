@@ -6,7 +6,154 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
-const HomePage = () => {
+const CategoryPage = () => {
+  let categoryData = [
+    {
+      categoryName: "supplements",
+      categoryProducts: [
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+      ],
+    },
+    {
+      categoryName: "Antifungals",
+      categoryProducts: [
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+      ],
+    },
+    {
+      categoryName: "Antihypertensives",
+      categoryProducts: [
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+      ],
+    },
+    {
+      categoryName: "Opthalmics",
+      categoryProducts: [
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+      ],
+    },
+    {
+      categoryName: "Anti-virals",
+      categoryProducts: [
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+        {
+          title: "supradyn",
+          rating: 5.0,
+          price: 2500,
+          slashed: 5000,
+          expiry: "2 months to expiry",
+          stocks: 100,
+        },
+      ],
+    },
+  ];
   let cardData = [
     {
       title: "supradyn",
@@ -81,14 +228,6 @@ const HomePage = () => {
     const container = document.getElementById("scrollTab");
     container.scrollLeft -= 100; // Adjust the scroll amount as needed
   }
-  function scrollRight() {
-    const container = document.getElementById("scrollContainer");
-    container.scrollLeft += 100; // Adjust the scroll amount as needed
-  }
-  function scrollTabRight() {
-    const container = document.getElementById("scrollTab");
-    container.scrollLeft += 100; // Adjust the scroll amount as needed
-  }
 
   return (
     <>
@@ -134,25 +273,6 @@ const HomePage = () => {
           </button>
         </div>
       </nav>
-      <main className="main bg-[#000040] gap-5 flex flex-col justify-center items-center p-8 py-20">
-        <p className="text-white text-5xl text-center">
-          Get Quality medications at <br />
-          <span className="text-[#ee75b7] text-5xl text-center">
-            giveaway prices
-          </span>
-        </p>
-        <Image
-          src="/frame.png"
-          alt="bvida purpose"
-          className="logo"
-          width={1200}
-          height={442.7}
-          priority
-        />
-        <div className="bg-[#ee75b6] text-white rounded-xl px-8 py-6">
-          Visit our store today
-        </div>
-      </main>
       <section>
         <div className="display">
           <button className="scroll scroll-left" onClick={() => scrollLeft()}>
@@ -239,245 +359,67 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className="product-category">
-        {/* <button className="scroll scroll-left" onClick={() => scrollTabLeft()}>
-          <Image
-            src="/iconamoon_arrow-right-2-light.png"
-            alt="bvida purpose"
-            className="logo"
-            width={40}
-            height={40}
-            priority
-          />
-        </button>
-        <button
-          className="scroll scroll-Right"
-          onClick={() => scrollTabRight()}
-        >
-          <Image
-            src="/iconamoon_arrow-right-2-light (1).png"
-            alt="bvida purpose"
-            className="logo"
-            width={40}
-            height={40}
-            priority
-          />
-        </button> */}
-        <div className="tabs" id="scrollTab">
-          <div className="supplements">
-            <Image
-              src="/Group 4.png"
-              alt="bvida purpose"
-              className="logo"
-              width={45}
-              height={27.7}
-              priority
-            />
-            <span>Supplements</span>
-          </div>
-          <div className="antibiotics">
-            <Image
-              src="/Group 5.png"
-              alt="bvida purpose"
-              className="logo"
-              width={35}
-              height={22}
-              priority
-            />
-            <span>Antibiotics</span>
-          </div>
-          <div className="supplements">
-            <Image
-              src="/Group 4.png"
-              alt="bvida purpose"
-              className="logo"
-              width={45}
-              height={27.7}
-              priority
-            />
-            <span>Supplements</span>
-          </div>
-          <div className="antibiotics">
-            <Image
-              src="/Group 5.png"
-              alt="bvida purpose"
-              className="logo"
-              width={35}
-              height={22}
-            />
-            <span>Antibiotics</span>
-          </div>
-          <div className="supplements">
-            <Image
-              src="/Group 4.png"
-              alt="bvida purpose"
-              className="logo"
-              width={45}
-              height={27.7}
-            />
-            <span>Supplements</span>
-          </div>
-          <div className="antibiotics">
-            <Image
-              src="/Group 5.png"
-              alt="bvida purpose"
-              className="logo"
-              width={35}
-              height={22}
-            />
-            <span>Antibiotics</span>
-          </div>
-          <div className="supplements">
-            <Image
-              src="/Group 4.png"
-              alt="bvida purpose"
-              className="logo"
-              width={45}
-              height={27.7}
-            />
-            <span>Supplements</span>
-          </div>
-          <div className="antibiotics">
-            <Image
-              src="/Group 5.png"
-              alt="bvida purpose"
-              className="logo"
-              width={35}
-              height={22}
-            />
-            <span>Antibiotics</span>
-          </div>
-          <div className="supplements">
-            <Image
-              src="/Group 4.png"
-              alt="bvida purpose"
-              className="logo"
-              width={45}
-              height={27.7}
-            />
-            <span>Supplements</span>
-          </div>
-          <div className="antibiotics">
-            <Image
-              src="/Group 5.png"
-              alt="bvida purpose"
-              className="logo"
-              width={35}
-              height={22}
-            />
-            <span>Antibiotics</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="cards">
-        <h1 className="font-bold text-2xl m-5">Supplements</h1>
-        <div className="card-layout  grid grid-cols-4 gap-8">
-          {cardData.map((card) => {
-            return (
-              <div className="card m-4 p-5">
-                <Image
-                  src="/Frame 1000004116.png"
-                  alt="bvida purpose"
-                  className="logo"
-                  width={328.81}
-                  height={243.92}
-                />
-                <div className="card-dets">
-                  <div className="card-ttle">
-                    <p>{card.title}</p>
-                    <div className="ratng flex gap-1 items-center">
+      <div className="categories my-10">
+        {categoryData.map((category) => {
+          return (
+            <div className="category flex  justify-around items-start">
+              <h1 className="m-4 p-5 text-lg font-bold">
+                {category.categoryName}
+              </h1>
+              <div className="category-products grid grid-cols-3 gap-6">
+                {category.categoryProducts.map((card) => {
+                  return (
+                    <div className="card m-4 p-5">
                       <Image
-                        src="/span.su0q88m.png"
+                        src="/Frame 1000004116.png"
                         alt="bvida purpose"
-                        className="star"
-                        width={12.89}
-                        height={12.89}
+                        className="logo"
+                        width={328.81}
+                        height={243.92}
                       />
-                      <p>{card.rating}</p>
+                      <div className="card-dets">
+                        <div className="card-ttle">
+                          <p>{card.title}</p>
+                          <div className="ratng flex gap-1 items-center">
+                            <Image
+                              src="/span.su0q88m.png"
+                              alt="bvida purpose"
+                              className="star"
+                              width={12.89}
+                              height={12.89}
+                            />
+                            <p>{card.rating}</p>
+                          </div>
+                        </div>
+                        <div className="price">
+                          <p className="text-[#ba2ba5] text-xl font-bold">{`₦${card.price}`}</p>
+                          <p className="text-[#898989] text-lg font-light line-through">
+                            {`₦${card.slashed}`}
+                          </p>
+                        </div>
+                        <div className="stock">
+                          <div className="exp flex gap-1 items-center">
+                            <Image
+                              src="/alert-02.png"
+                              alt="bvida purpose"
+                              className="alert"
+                              width={21.49}
+                              height={20.42}
+                            />
+                            <p className="text-[#ef4444]">{card.expiry}</p>
+                          </div>
+                          <p>{`in stock: ${card.stocks} packs`}</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="price">
-                    <p className="text-[#ba2ba5] text-xl font-bold">{`₦${card.price}`}</p>
-                    <p className="text-[#898989] text-lg font-light line-through">
-                      {`₦${card.slashed}`}
-                    </p>
-                  </div>
-                  <div className="stock">
-                    <div className="exp flex gap-1 items-center">
-                      <Image
-                        src="/alert-02.png"
-                        alt="bvida purpose"
-                        className="alert"
-                        width={21.49}
-                        height={20.42}
-                      />
-                      <p className="text-[#ef4444]">{card.expiry}</p>
-                    </div>
-                    <p>{`in stock: ${card.stocks} packs`}</p>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className="partners m-10">
-        <p className="head text-center mb-10 text-[#b3b6ba]">OUR PARTNERS</p>
-        <p className="subtitle text-center text-[#000040] text-3xl">
-          Current Great Partners with <span className="font-bold">BVIDA</span>
-        </p>
-        <div className="images mt-16 flex justify-around items-center">
-          <Image
-            src="/image 3.png"
-            alt="bvida purpose"
-            className="logo"
-            width={226.79}
-            height={80}
-            priority
-          />
-          <Image
-            src="/image 2.png"
-            alt="bvida purpose"
-            className="logo"
-            width={65}
-            height={65}
-            priority
-          />
-          <Image
-            src="/image 1.png"
-            alt="bvida purpose"
-            className="logo"
-            width={200}
-            height={45}
-            priority
-          />
-          <Image
-            src="/image 4.png"
-            alt="bvida purpose"
-            className="logo"
-            width={133.3}
-            height={59.9}
-            priority
-          />
-          <Image
-            src="/image 5.png"
-            alt="bvida purpose"
-            className="logo"
-            width={80}
-            height={80}
-            priority
-          />
-        </div>
+            </div>
+          );
+        })}
       </div>
       <footer className="bg-[#000040] p-10">
-        <div className="join">
-          <p>Join us today!</p>
-          <div className="form">
-            <input type="text" placeholder="Enter your email" />
-            <div className="btn2">Join us</div>
-          </div>
-        </div>
         <div className="foot text-white flex justify-around items-start">
           <div className="buy">
             <p className="text-xl font-extrabold mb-10">Buy</p>
@@ -564,4 +506,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default CategoryPage;
