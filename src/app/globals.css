@@ -225,3 +225,9 @@
 .cards{
   margin: 20px auto;
 }
+.cart{
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  right: 0;
+}

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       {/* <Landingpage /> */}
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <CategoryPage /> */}
     </>
   );
