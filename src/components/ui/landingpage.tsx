@@ -14,19 +14,21 @@ const Landingpage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="navbar flex justify-between items-center p-2">
-        <Image
-          src="/Layer1.png"
-          alt="bvida Logo"
-          className="logo"
-          width={140}
-          height={31.59}
-          priority
-        />
+        <Link href={"/"}>
+          <Image
+            src="/Layer1.png"
+            alt="bvida Logo"
+            className="logo"
+            width={140}
+            height={31.59}
+            priority
+          />
+        </Link>
         <div className="nav-btn flex gap-3">
-          <Link href="/solutions">
+          <Link href="/home">
             <p>Solutions</p>
           </Link>
-          <Link href="/partners">
+          <Link href="#partners">
             <p>Partners</p>
           </Link>
           <Link href="/investors">
@@ -58,7 +60,7 @@ const Landingpage = () => {
         </div>
       </main>
       <section className="py-10">
-        <div className="partners m-10">
+        <div id="partners" className="partners m-10">
           <p className="head text-center mb-10 text-[#b3b6ba]">OUR PARTNERS</p>
           <p className="subtitle text-center text-[#000040] text-3xl">
             Current Great Partners with <span>BVIDA</span>
@@ -153,7 +155,7 @@ const Landingpage = () => {
           </div>
         </div>
       </section>
-      <footer className="text-white p-10">
+      <footer className="text-white bg-[#000040] p-10">
         <div className="join">
           <p>Join us today!</p>
           <div className="form">

@@ -216,18 +216,12 @@
   display: flex;
   justify-content: space-between;
 }
-/* .price>p{
-  color: #ba2ba5;
-  font-family: "DM Sans", sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-} */
 .cards{
   margin: 20px auto;
 }
-.cart{
-  position: absolute;
-  background: #ffffff;
-  top: 0;
-  right: 0;
+body.active-modal{
+  overflow-y: hidden;
+}
+html{
+  scroll-behavior: smooth;
 }

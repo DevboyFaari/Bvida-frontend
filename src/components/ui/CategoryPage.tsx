@@ -1,12 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import Cart from "../Cart";
 
 const CategoryPage = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   let categoryData = [
     {
       categoryName: "supplements",
@@ -238,16 +250,19 @@ const CategoryPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="navbar flex justify-between items-center p-2 mx-4">
-        <Image
-          src="/Layer1.png"
-          alt="bvida Logo"
-          className="logo"
-          width={140}
-          height={31.59}
-          priority
-        />
+        <Link href={"/"}>
+          <Image
+            src="/Layer1.png"
+            alt="bvida Logo"
+            className="logo"
+            width={140}
+            height={31.59}
+            priority
+          />
+        </Link>
+
         <div className="nav-btn flex gap-3">
-          <Link href="/solutions">
+          <Link href="/home">
             <p>Solutions</p>
           </Link>
           <Link href="/partners">
@@ -258,7 +273,10 @@ const CategoryPage = () => {
           </Link>
         </div>
         <div className="left flex gap-4">
-          <button className="rounded-xl flex gap-2 font-semibold border-2 border-solid p-3 border-[#000040] text-[#000040]">
+          <button
+            onClick={toggleModal}
+            className="rounded-xl flex gap-2 font-semibold border-2 border-solid p-3 border-[#000040] text-[#000040]"
+          >
             Your cart
             <Image
               src="/Cart icon.png"
@@ -272,9 +290,10 @@ const CategoryPage = () => {
             Contact us
           </button>
         </div>
+        {modal && <Cart toggleModal={toggleModal} />}
       </nav>
       <section>
-        <div className="display">
+        <div className="display -z-10">
           <button className="scroll scroll-left" onClick={() => scrollLeft()}>
             <Image
               src="/iconamoon_arrow-right-2-light.png"

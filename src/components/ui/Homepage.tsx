@@ -1,12 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import Cart from "../Cart";
 
 const HomePage = () => {
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   let cardData = [
     {
       title: "supradyn",
@@ -99,19 +111,21 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="navbar flex justify-between items-center p-2 mx-4">
-        <Image
-          src="/Layer1.png"
-          alt="bvida Logo"
-          className="logo"
-          width={140}
-          height={31.59}
-          priority
-        />
+        <Link href={"/"}>
+          <Image
+            src="/Layer1.png"
+            alt="bvida Logo"
+            className="logo"
+            width={140}
+            height={31.59}
+            priority
+          />
+        </Link>
         <div className="nav-btn flex gap-3">
-          <Link href="/solutions">
+          <Link href="/home">
             <p>Solutions</p>
           </Link>
-          <Link href="/partners">
+          <Link href="#partners">
             <p>Partners</p>
           </Link>
           <Link href="/investors">
@@ -119,7 +133,10 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="left flex gap-4">
-          <button className="rounded-xl flex gap-2 font-semibold border-2 border-solid p-3 border-[#000040] text-[#000040]">
+          <button
+            onClick={toggleModal}
+            className="rounded-xl flex gap-2 font-semibold border-2 border-solid p-3 border-[#000040] text-[#000040]"
+          >
             Your cart
             <Image
               src="/Cart icon.png"
@@ -133,70 +150,7 @@ const HomePage = () => {
             Contact us
           </button>
         </div>
-        <div className="cart p-12">
-          <div className="close absolute top-2 right-2">
-            <Image
-              src="/Close icon.png"
-              alt="close"
-              width={26}
-              height={26}
-              priority
-            />
-          </div>
-          <div className="cart-filled hidden">
-            <p className="text-lg font-bold text-[#000040] m-2">
-              There is one product in your cart
-            </p>
-            <div className="flex mt-3 items-start justify-between h-60">
-              <div className="flex gap-2 items-center justify-center  ">
-                <Image
-                  src="/Link → supradyn--30-caps.jpg (1).png"
-                  alt="back"
-                  width={70}
-                  height={70}
-                  priority
-                />
-                <div className="flex flex-col justify-center">
-                  <span>Supradyn tablet</span>
-                  <span>2500</span>
-                </div>
-              </div>
-              <div className="qty p-5">1</div>
-            </div>
-            <div className="total flex flex-col justify-center gap-3">
-              <div className="flex justify-between">
-                <span className="font-semibold">Subtotal</span>
-                <span className="tag font-bold text-lg">2500</span>
-              </div>
-              <div className="bg-[#ff0080] text-white rounded-xl py-2 px-3 w-60 self-center text-center">
-                Continue to checkout
-              </div>
-              <div className="flex gap-2 justify-center items-center self-center text-[#ff0080] text-center border border-[#ff0080] rounded-xl p-2 w-40">
-                <Image
-                  src="/back.png"
-                  alt="cart"
-                  width={12}
-                  height={10}
-                  priority
-                />
-                Return to store
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-3">
-            <Image
-              src="/Group.png"
-              alt="cart"
-              width={300}
-              height={291.97}
-              priority
-            />
-            <p className="font-bold ">There is no product in your cart yet</p>
-            <div className="bg-[#ff0080] text-sm text-white rounded-xl px-4 text-center py-3">
-              Continue shopping to add to cart
-            </div>
-          </div>
-        </div>
+        {modal && <Cart toggleModal={toggleModal} />}
       </nav>
       <main className="main bg-[#000040] gap-5 flex flex-col justify-center items-center p-8 py-20">
         <p className="text-white text-5xl text-center">
@@ -213,9 +167,11 @@ const HomePage = () => {
           height={442.7}
           priority
         />
-        <div className="bg-[#ee75b6] text-white rounded-xl px-8 py-6">
-          Visit our store today
-        </div>
+        <Link href={"/category"}>
+          <div className="bg-[#ee75b6] text-white rounded-xl px-8 py-6">
+            Visit our store today
+          </div>
+        </Link>
       </main>
       <section>
         <div className="display">
@@ -486,7 +442,7 @@ const HomePage = () => {
           })}
         </div>
       </div>
-      <div className="partners m-10">
+      <div id="partners" className="partners m-10">
         <p className="head text-center mb-10 text-[#b3b6ba]">OUR PARTNERS</p>
         <p className="subtitle text-center text-[#000040] text-3xl">
           Current Great Partners with <span className="font-bold">BVIDA</span>
