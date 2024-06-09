@@ -1,19 +1,20 @@
-<<<<<<< HEAD
-=======
-import CategoryPage from "@bvida/components/ui/CategoryPage";
-import HomePage from "@bvida/components/ui/Homepage";
-import Landingpage from "@bvida/components/ui/landingpage";
->>>>>>> ded8777598f021214d2410d8a4d2920d5636d4f0
+// import CategoryPage from "@bvida/components/ui/CategoryPage";
+// import HomePage from "@bvida/components/ui/Homepage";
+// import Landingpage from "@bvida/components/ui/landingpage";
 import Image from "next/image";
 import React from "react";
-import Landingpage from "../components/Landingpage";
+import HomePage from "../components/ui/Homepage";
+import CategoryPage from "../components/ui/CategoryPage";
+import Landingpage from "../components/ui/landingpage";
+import Footer from "../components/ui/Footer";
 
 export default function Home() {
   return (
     <>
-      {/* <Landingpage /> */}
-      {/* <HomePage /> */}
-      {/* <CategoryPage /> */}
+      <Landingpage />
+      {/* <HomePage />
+      <CategoryPage /> */}
+      <Footer />
     </>
   );
 }

@@ -370,12 +370,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="cards">
+      {/* <div className="cards">
         <h1 className="font-bold text-2xl m-5">Supplements</h1>
         <div className="card-layout  grid grid-cols-4 gap-8">
-          {cardData.map((card) => {
+          {cardData.map((card, index) => {
             return (
-              <div className="card m-4 p-5">
+              <div className="card m-4 p-5" key={index}>
                 <Image
                   src="/Frame 1000004116.png"
                   alt="bvida purpose"
@@ -421,7 +421,7 @@ const HomePage = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
       <div className="partners m-10">
         <p className="head text-center mb-10 text-[#b3b6ba]">OUR PARTNERS</p>
         <p className="subtitle text-center text-[#000040] text-3xl">
@@ -470,96 +470,7 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <footer className="bg-[#000040] p-10">
-        <div className="join">
-          <p>Join us today!</p>
-          <div className="form">
-            <input type="text" placeholder="Enter your email" />
-            <div className="btn2">Join us</div>
-          </div>
-        </div>
-        <div className="foot text-white flex justify-around items-start">
-          <div className="buy">
-            <p className="text-xl font-extrabold mb-10">Buy</p>
-            <ul className="flex flex-col font-light gap-2">
-              <li>Registration</li>
-              <li>Special Requests</li>
-              <li>Returns</li>
-            </ul>
-          </div>
-          <div className="sell">
-            <p className="text-xl font-extrabold mb-10">Sell</p>
-            <ul>
-              <li>Become a partner</li>
-            </ul>
-          </div>
-          <div className="stay">
-            <p className="text-xl font-extrabold mb-10">Stay Informed</p>
-            <ul className="flex flex-col gap-2 font-light">
-              <li>Bvida Blogs</li>
-              <li>Bvida Community</li>
-              <li>Privacy Policy</li>
-              <li>Terms & Conditions</li>
-            </ul>
-          </div>
-          <div className="contact">
-            <p className="text-xl font-extrabold mb-10">Contact Us</p>
-            <ul className="flex flex-col gap-2 font-light font-sans">
-              <li>Email Us</li>
-              <li>Call Us</li>
-              <li>Text Us</li>
-            </ul>
-          </div>
-        </div>
-        <div className="links flex justify-center items-center gap-8 mt-16">
-          <Link href="">
-            <Image
-              src="/Vector.png"
-              alt="Vercel Logo"
-              width={23.1}
-              height={22.97}
-              priority
-            />
-          </Link>
-          <Link href="">
-            <Image
-              src="/Vector (1).png"
-              alt="Vercel Logo"
-              width={23.1}
-              height={22.97}
-              priority
-            />
-          </Link>
-          <Link href="">
-            <Image
-              src="/Vector (2).png"
-              alt="Vercel Logo"
-              width={23.1}
-              height={22.97}
-              priority
-            />
-          </Link>
-          <Link href="">
-            <Image
-              src="/Vector (3).png"
-              alt="Vercel Logo"
-              width={23.1}
-              height={22.97}
-              priority
-            />
-          </Link>
-        </div>
-        <div className="flex justify-center mt-14 items-center">
-          <Image
-            src="/Asset 11 1.png"
-            alt="Bvida Logo"
-            className="bvida"
-            width={120}
-            height={27.12}
-            priority
-          />
-        </div>
-      </footer>
+    
     </>
   );
 };

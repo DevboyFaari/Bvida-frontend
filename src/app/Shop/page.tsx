@@ -1,12 +1,10 @@
-"use client";
-
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 
-const CategoryPage = () => {
+const Shop = () => {
   let categoryData = [
     {
       categoryName: "supplements",
@@ -228,7 +226,6 @@ const CategoryPage = () => {
     const container = document.getElementById("scrollTab");
     container.scrollLeft -= 100; // Adjust the scroll amount as needed
   }
-
   return (
     <>
       <Head>
@@ -271,6 +268,7 @@ const CategoryPage = () => {
           <button className="btn border-solid border-2 p-3 rounded-xl text-white bg-[#000040]">
             Contact us
           </button>
+          
         </div>
       </nav>
       {/* <section>
@@ -362,7 +360,10 @@ const CategoryPage = () => {
       <div className="categories my-10">
         {categoryData.map((category, index) => {
           return (
-            <div className="category flex  justify-around items-start" key={index}>
+            <div
+              className="category flex  justify-around items-start"
+              key={index}
+            >
               <h1 className="m-4 p-5 text-lg font-bold">
                 {category.categoryName}
               </h1>
@@ -506,4 +507,4 @@ const CategoryPage = () => {
   );
 };
 
-export default CategoryPage;
+export default Shop;
