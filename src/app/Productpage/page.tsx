@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -198,40 +199,41 @@ const page = () => {
           </p>
         </div>
         <div className="flex w-1/2 gap-[400px] text-gray-700 font-bold">
-                <div className="ml-[70px]">Product</div>
-                <div>Quantity</div>
-            </div>
+          <div className="ml-[70px]">Product</div>
+          <div>Quantity</div>
+        </div>
         <div className="w-full relative bottom-[900px] left-[500px] md:w-1/2 flex  justify-center items-center">
-           
-          <image
+          <Image
             className="object-cover h-[60px] w-full md:w-auto"
-            src="Supradyn.png"
+            width={60}
+            height={60}
+            src="/Supradyn.png"
             alt="Product"
           />
-         <div className="ml-6">
-    <span className="block">Supradyn tablets</span>
-    <span className="block font-bold text-[#FF0080]">N 2500</span>
-    
-  </div>
-  <div className="relative left-[280px]  font-bold text-[#FF0080]">1</div>
+          <div className="ml-6">
+            <span className="block">Supradyn tablets</span>
+            <span className="block font-bold text-[#FF0080]">N 2500</span>
+          </div>
+          <div className="relative left-[280px]  font-bold text-[#FF0080]">
+            1
+          </div>
         </div>
         <div className="flex relative gap-80 bottom-[300px] right-[70px]">
-            <div>Delivery fee</div>
-            <div>N 3000</div>
+          <div>Delivery fee</div>
+          <div>N 3000</div>
         </div>
         <div className="flex relative gap-80 bottom-[300px] left-[800px] font-bold">
-            <div>Total</div>
-            <div>N 5500</div>
+          <div>Total</div>
+          <div>N 5500</div>
         </div>
         <div className="flex flex-col mr-[120px]  relative bottom-[100px] items-center mt-4">
-  <button className="bg-pink-500 text-white font-bold py-2 px-6 rounded-[5px] w-80 mb-4">
-    Order Now
-  </button>
-  <button className="border border-pink-500 text-pink-500 whitespace-nowrap font-bold py-2 px-6 rounded-[5px] w-40">
-    Return to Store
-  </button>
-</div>
-
+          <button className="bg-pink-500 text-white font-bold py-2 px-6 rounded-[5px] w-80 mb-4">
+            Order Now
+          </button>
+          <button className="border border-pink-500 text-pink-500 whitespace-nowrap font-bold py-2 px-6 rounded-[5px] w-40">
+            Return to Store
+          </button>
+        </div>
       </div>
     </div>
   );
