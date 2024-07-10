@@ -204,7 +204,7 @@ const page = () => {
         </div>
         <div className="w-full relative bottom-[900px] left-[500px] md:w-1/2 flex  justify-center items-center">
           <Image
-            className="object-cover h-[60px] w-full md:w-auto"
+            className="object-cover  w-full md:w-auto"
             width={60}
             height={60}
             src="/Supradyn.png"
