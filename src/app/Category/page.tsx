@@ -5,6 +5,11 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const CategoryPage = () => {
   let categoryData = [
@@ -359,7 +364,34 @@ const CategoryPage = () => {
           </div>
         </div>
       </section> */}
+      
       <div className="categories my-10">
+        <div className="bg-[pink]">
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          spaceBetween={30}
+          style={{ padding: 30 }}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+        >
+          {categoryData.map(()=>(
+             <SwiperSlide className="take">
+            <div >
+              <Image
+               src="/Frame 1000004116.png"
+               alt="bvida purpose"
+               className="logo"
+               width={328.81}
+               height={243.92}
+              />
+            </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        </div>
+
+
         {categoryData.map((category, index) => {
           return (
             <div className="category flex  justify-around items-start" key={index}>

@@ -1,9 +1,39 @@
 import React from "react";
 import Image from "next/image";
+import Footer from "../../components/ui/Footer";
+import Link from "next/link";
 
 const page = () => {
   return (
     <div>
+        <nav className="navbar flex justify-between items-center p-2">
+        <Image
+          src="/Layer1.png"
+          alt="bvida Logo"
+          className="logo"
+          width={140}
+          height={31.59}
+          priority
+        />
+        <div className="nav-btn flex gap-3">
+          <Link href="/solutions">
+            <p>Solutions</p>
+          </Link>
+          <Link href="/partners">
+            <p>Partners</p>
+          </Link>
+          <Link href="/investors">
+            <p>Investors</p>
+          </Link>
+          <Link href="/Shop">
+            <p>Shop</p>
+          </Link>
+        </div>
+        <button className="btn border-solid border-2 p-3 rounded-xl text-white bg-[#000040]">
+          Contact us
+        </button>
+      </nav>
+      <hr className="w-[100%] "/>
       <div className="flex flex-wrap justify-between p-6">
         <div className="w-full md:w-1/2 pr-4">
           <div className="mb-4">
@@ -235,6 +265,7 @@ const page = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

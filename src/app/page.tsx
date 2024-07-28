@@ -4,8 +4,8 @@
 import Image from "next/image";
 import React from "react";
 import HomePage from "../components/ui/Homepage";
-import CategoryPage from "../components/ui/CategoryPage";
-import Landingpage from "../components/ui/landingpage";
+import CategoryPage from "./Category/page";
+import Landingpage from "./Landing/page";
 import Footer from "../components/ui/Footer";
 
 export default function Home() {

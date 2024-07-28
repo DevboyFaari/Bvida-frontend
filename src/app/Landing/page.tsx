@@ -32,7 +32,7 @@ const Landingpage = () => {
           <Link href="/investors">
             <p>Investors</p>
           </Link>
-          <Link href="/Shop">
+          <Link href="/Category">
             <p>Shop</p>
           </Link>
         </div>
@@ -156,7 +156,6 @@ const Landingpage = () => {
           </div>
         </div>
       </section>
-    
     </>
   );
 };
